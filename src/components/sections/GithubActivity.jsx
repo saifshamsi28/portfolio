@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function GithubActivity() {
   const githubUsername = "saifshamsi28";
+  const profileViewsUrl = `https://komarev.com/ghpvc/?username=${githubUsername}&label=&color=0e75b6&style=plastic`;
 
   return (
     <section id="github-activity" className="py-24 relative">
@@ -234,17 +235,24 @@ export default function GithubActivity() {
                 Profile Views
               </CardTitle>
             </CardHeader>
-            <CardContent className="flex justify-center pb-6">
+            <CardContent className="pb-6">
               <motion.div
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
+                className="mx-auto flex max-w-sm items-center justify-center rounded-2xl border border-primary/10 bg-gradient-to-br from-primary/10 via-card to-cyan-500/10 px-6 py-5 shadow-lg shadow-primary/5"
+                whileHover={{ scale: 1.02, y: -2 }}
+                transition={{ duration: 0.25 }}
               >
-                <img 
-                  src={`https://profile-counter.glitch.me/${githubUsername}/count.svg?`}
-                  alt="Profile Counter"
-                  className="rounded-lg"
-                  loading="lazy"
-                />
+                <div className="text-center">
+                  <motion.img
+                    src={profileViewsUrl}
+                    alt="Live profile views count"
+                    className="mx-auto h-10 w-auto"
+                    loading="lazy"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4 }}
+                  />
+                </div>
               </motion.div>
             </CardContent>
           </Card>
