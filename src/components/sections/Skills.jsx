@@ -7,6 +7,7 @@ import hibernateLogo from "@/assets/images/hibernate.svg";
 import intellijLogo from "@/assets/images/intellij.svg";
 import androidStudioLogo from "@/assets/images/android-studio.svg";
 import javaLogo from "@/assets/images/javalogo.png";
+import jsLogo from "@/assets/images/jslogo.png";
 import jwtLogo from "@/assets/images/jwt.svg";
 import kafkaLogo from "@/assets/images/kafka.svg";
 import mavenLogo from "@/assets/images/maven.svg";
@@ -22,12 +23,17 @@ import springDataLogo from "@/assets/images/spring-data.svg";
 import springSecurityLogo from "@/assets/images/spring-security.svg";
 import vsLogo from "@/assets/images/vslogo.png";
 import dockerLogo from "@/assets/images/docker.svg";
+import cLogo from "@/assets/images/clogo.png";
+import cppLogo from "@/assets/images/cplusplus.svg";
 
 export default function Skills() {
   const skills = {
     "Core Languages": [
       { name: "Java", logo: javaLogo },
       { name: "Python", logo: pythonLogo },
+      { name: "JavaScript", logo: jsLogo },
+      { name: "C", logo: cLogo },
+      { name: "C++", logo: cppLogo },
     ],
     "Java Backend": [
       { name: "Spring Boot", logo: springBootLogo },
